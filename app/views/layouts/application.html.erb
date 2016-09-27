@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TeamManagementVision</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'deafult', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'default', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if user_signed_in? %>
+  <%= link_to "sign out",destroy_user_session_path, method: :delete %>
+
+<% end%>
+<br>
+    <%= yield %>
+  </body>
+</html>
